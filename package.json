@@ -1,0 +1,23 @@
+{
+  "name": "road-to-web3-pok-1.erc721-with-alchemy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-local": "npx hardhat test --network hardhat",
+    "deploy-local": "npx hardhat deploy --network hardhat --tags Alchemy",
+    "deploy-goerli": "npx hardhat deploy --network goerli --tags Alchemy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "hardhat": "^2.12.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.3",
+    "dotenv": "^16.0.3",
+    "hardhat-deploy": "^0.11.18"
+  }
+}
