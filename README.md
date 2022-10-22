@@ -8,7 +8,7 @@
 
 <h3 align="center">
 	Deployed at: 
-    <a href="https://rtw3-pok-erc721.vercel.app/" target="_blank"><img src="https://seeklogo.com/images/V/vercel-logo-11E85AE911-seeklogo.com.png" alt="Vercel Badge" height="16"></a>&nbsp;
+    <a href="https://rtw3-pok-erc721.vercel.app/" target="_blank">rtw3-pok-erc721.vercel.app</a>&nbsp;
 </h3>
 
 <h4 align="center">
