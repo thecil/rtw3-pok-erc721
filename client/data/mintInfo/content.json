@@ -1,0 +1,34 @@
+{
+    "meta": {
+        "title": "Alchemy - Nft Mint Challenge"
+      },
+    "content": {
+        "info": {
+            "imgTop": "/img/mint/cent_pfp_hipster.png",
+            "imgLeft": "/img/mint/cent_pfp_crown.png",
+            "infoTitle": "Join now, and win the whitelist spots",
+            "infoText": "Become a part of the most disruptive music NFT projects in the industry! How to get whitelisted for the genesis mint:",
+            "infoLinks": {
+              "followText": "Follow & join our socials FOR MORE INFORMATION",
+              "followSocials": [
+                {
+                  "LinkText": "Twitter",
+                  "LinkIcon": "/icons/twitter.svg",
+                  "LinkHref": "https://twitter.com/thecil_eth"
+                },
+                {
+                  "LinkText": "Github",
+                  "LinkIcon": "/icons/github.svg",
+                  "LinkHref": "https://github.com/thecil/"
+                },
+
+                {
+                  "LinkText": "linkedin",
+                  "LinkIcon": "/icons/linkedin.svg",
+                  "LinkHref": "https://www.linkedin.com/in/carlos-zambrano-6257b2184/"
+                }                    
+              ]
+            }
+        }
+    }
+}
