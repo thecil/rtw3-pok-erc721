@@ -1,7 +1,10 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { SocialMedia } from "../social/SocialMedia";
 import { MintConnectBtn } from "../mint/MintConnectBtn";
-export default function MintContainer({ children }) {
+
+type MyComponentProps = React.PropsWithChildren<{ }>;
+
+export default function MintContainer({ children } : MyComponentProps) {
   return (
     <div className="m-8 container absolute">
       <Container>
