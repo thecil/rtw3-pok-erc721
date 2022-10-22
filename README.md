@@ -6,6 +6,11 @@
 	Proof of Knowledge for Alchemy Road to Web3 Challenges - ERC721 Mint Dapp
 </h3>
 
+<h3 align="center">
+	Deployed at: 
+    <a href="https://rtw3-pok-erc721.vercel.app/" target="_blank"><img src="https://seeklogo.com/images/V/vercel-logo-11E85AE911-seeklogo.com.png" alt="Vercel Badge" height="16"></a>&nbsp;
+</h3>
+
 <h4 align="center">
 	Status: 🚀 Finished
 </h4>
