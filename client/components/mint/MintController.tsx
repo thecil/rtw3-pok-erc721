@@ -1,11 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useContractInfo } from "../../hooks/useContractInfo";
-
-import { useAccount, useContractRead } from "wagmi";
-import { BigNumber } from "ethers";
+import { useAccount } from "wagmi";
 import LayoutMint from "../layout/LayoutMint";
 import MintContainer from "../container/MintContainer";
-import { MintConnectBtn } from "./MintConnectBtn";
 import { MintSuccessModal } from "./MintSuccessModal";
 import { MintForm } from "./MintForm";
 import Spinner from "react-bootstrap/Spinner";
@@ -21,33 +18,24 @@ const MintController: React.FC = () => {
   const [stage, setStage] = useState(MintUiStages.loading);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [mintTransUrl, setMintTransUrl] = useState("");
-  const { address, isConnected } = useAccount();
-  const contractInterface = useContractInfo();
+  const { isConnected } = useAccount();
 
   const onMintSucess = (url: string) => {
     setShowSuccessModal(true);
     setMintTransUrl(url);
   };
 
-  const { data: totalSupply, refetch: fetchTotalSupply } = useContractRead({
-    ...contractInterface,
-    functionName: "totalSupply",
-    cacheTime: Infinity,
-    enabled: false,
-  });
-
   useEffect(() => {
     if (!isConnected) setStage(MintUiStages.connect);
     if (isConnected) {
-      fetchTotalSupply();
       setStage(MintUiStages.mint);
     }
-  }, [isConnected, fetchTotalSupply]);
+  }, [ isConnected ]);
 
   const content = useMemo(() => {
     switch (stage) {
       case MintUiStages.loading:
-        return <h2>Loading</h2>;
+        return <Spinner animation="border" variant="light" />;
 
       case MintUiStages.error:
         <div>Error</div>;

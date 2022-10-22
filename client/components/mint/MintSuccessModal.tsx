@@ -1,6 +1,5 @@
 import React from "react";
 import { Modal } from "react-bootstrap";
-import styles from "./MintSuccessModal.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
@@ -19,18 +18,18 @@ export const MintSuccessModal: React.FC<MintSuccessModalProps> = ({
 
   return (
     <Modal {...props} centered>
-      <Modal.Body className={styles.modal}>
-        <div className="d-flex justify-content-end">
-          <span className={styles.closeSpan} onClick={() => onHide && onHide()}>
+      <Modal.Body className="bg-neutral-900 p-4 relative rounded m-4 w-max mx-auto">
+        <div className="flex justify-end">
+          <span className="cursor-pointer	 text-white" onClick={() => onHide && onHide()}>
             {closeIcon}
           </span>
         </div>
-        <div className={styles.wrapper}>
-          <video autoPlay loop muted className={styles.goldTicket}>
+        <div className="grid justify-items-center text-white p-4">
+          <video autoPlay loop muted className="w-96 h-96 rounded">
             <source src="/video/au_video.mp4" />
           </video>
 
-          <h1 className={styles.title}>MINT SUCCESSFUL</h1>
+          <h1 className="text-2xl">MINT SUCCESSFUL</h1>
           <p>WELCOME ALCHEMY CHALLENGES!</p>
           {transactionUrl && (
             <>
@@ -38,7 +37,7 @@ export const MintSuccessModal: React.FC<MintSuccessModalProps> = ({
               <a
                 href={transactionUrl}
                 target="_blank"
-                className={styles.link}
+                className="text-blue-400 truncate"
                 rel="noreferrer"
               >
                 {transactionUrl}
